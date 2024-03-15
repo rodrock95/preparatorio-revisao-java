@@ -1,0 +1,27 @@
+package entities;
+
+public class Individual extends TaxPayer{
+	
+	private Double healthExpenditures;
+	
+	public Individual() {
+	}
+	
+	public Individual(Double healthExpenditures) {
+		super();
+		this.healthExpenditures = healthExpenditures;
+	}
+
+	@Override
+	public double tax() {
+		double calc = 0;
+		
+		if(getAnualIncome() > 20000.00 ) {
+			calc = (getAnualIncome() * 0.25) - (healthExpenditures * 0.50);
+		}
+		else {
+			calc = (getAnualIncome() * 0.15) - (healthExpenditures * 0.50);
+		}
+		return calc;
+	}
+}

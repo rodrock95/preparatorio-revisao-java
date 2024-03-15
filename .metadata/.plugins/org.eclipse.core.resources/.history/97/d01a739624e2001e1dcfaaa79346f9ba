@@ -1,0 +1,25 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário que insira o primeiro número
+        System.out.print("Digite o primeiro número: ");
+        double numero1 = scanner.nextDouble();
+        
+        // Solicita ao usuário que insira o segundo número
+        System.out.print("Digite o segundo número: ");
+        double numero2 = scanner.nextDouble();
+        
+        // Verifica qual número é o maior
+        double maiorNumero = Math.max(numero1, numero2);
+        
+        // Exibe o maior número
+        System.out.println("O maior número é: " + maiorNumero);
+        
+        scanner.close(); // Fechar o scanner para liberar recursos
+    }
+}
