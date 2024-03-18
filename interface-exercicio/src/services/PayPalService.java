@@ -9,7 +9,7 @@ public class PayPalService implements OnlinePaymentService {
 	
 	@Override
 	public double paymentFee(double amount) {
-		return amount * 0.02;
+		return amount * 0.01;
 	}
 
 
